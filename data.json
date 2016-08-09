@@ -75,7 +75,7 @@
       "rating": 4
     }, {
       "name": "React/Redux",
-      "rating": 3
+      "rating": 2
     }, {
       "name": "HTML5",
       "rating": 3
@@ -88,6 +88,12 @@
     }, {
       "name": "Ruby on Rails",
       "rating": 3
+    }, {
+      "name": "D3",
+      "rating": 2
+    }, {
+      "name": "Ember",
+      "rating": 1
   }],
   "projects": [{
     "name": "Resume/Portfolio",

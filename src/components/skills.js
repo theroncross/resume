@@ -1,26 +1,11 @@
 import React, { Component } from 'react';
-import data from 'json!../../data';
+import SkillsChart from './skills-chart';
 
 class Skills extends Component {
-  renderSkills() {
-    return data.skills.map((skill) => {
-      return (
-        <li key={skill.name} className="skill-card">
-          <div>
-            <strong>{skill.name}</strong>
-            <span>{skill.rating}</span>
-          </div>
-        </li>
-      );
-    });
-  }
-
   render() {
     return (
       <div className="Skills">
-        <ul>
-          {this.renderSkills()}
-        </ul>
+        <SkillsChart />
       </div>
     );
   }

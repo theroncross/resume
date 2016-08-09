@@ -6,7 +6,10 @@ class Experience extends Component {
     return data.experience.map((job) => {
       return (
         <li key={job.company}>
-          <strong>{job.title}</strong>{job.company}
+          <div className="experienceCard">
+            <h3>{job.title}</h3>
+            <h4>{job.company} | <em>{job.location}</em></h4>
+          </div>
         </li>
       );
     });
