@@ -1,0 +1,83 @@
+#root {
+  width: 100%;
+}
+
+.App {
+  max-width: 800px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+}
+
+ul {
+    list-style: none;
+}
+
+.Header {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #222;
+  color: white;
+  padding: 10px 0;
+}
+
+h3, h4 {
+  margin: 0;
+}
+
+.Header a {
+  text-decoration: none;
+  color: white;
+}
+
+.Header ul {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.Header li {
+  margin-right: 10px;
+}
+
+.ContactCard {
+  width: 30%;
+  max-width: 300px;
+  margin: 10px 0;
+}
+
+.Skills {
+  background-color: #eee;
+}
+
+.SkillsChart {
+  margin: 10px;
+}
+
+.SkillsChart text {
+  fill: white;
+  font: 10px sans-serif;
+  text-anchor: end;
+}
+
+.Experience ul {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0;
+}
+
+.experienceCard {
+  background-color: #eee;
+  margin: 5px;
+  padding: 5px 10px;
+}
