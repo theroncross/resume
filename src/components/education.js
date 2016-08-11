@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import data from 'json!../../data';
+import { connect } from 'react-redux';
 
 class Education extends Component {
   renderEducation() {
-    return data.education.map((school) => {
+    return this.props.education.map((school) => {
       return (
         <li key={school.name}>
           <strong>{school.degree}</strong>{school.name}
@@ -23,4 +23,14 @@ class Education extends Component {
   }
 }
 
-export default Education;
+Education.propTypes = {
+  education: React.PropTypes.array.isRequired,
+};
+
+const mapStateToProps = (state) => {
+  return {
+    education: state.education,
+  };
+};
+
+export default connect(mapStateToProps)(Education);

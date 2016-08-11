@@ -1,7 +1,8 @@
 {
     "extends": "airbnb",
     "rules": {
-      "arrow-body-style": "off"
+      "arrow-body-style": "off",
+      "react/jsx-filename-extension": "off"
     },
     "plugins": [
         "react"

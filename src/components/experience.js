@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import data from 'json!../../data';
+import { connect } from 'react-redux';
 
 class Experience extends Component {
   renderExperience() {
-    return data.experience.map((job) => {
+    return this.props.experience.map((job) => {
       return (
         <li key={job.company}>
           <div className="experienceCard">
@@ -26,4 +26,14 @@ class Experience extends Component {
   }
 }
 
-export default Experience;
+Experience.propTypes = {
+  experience: React.PropTypes.array.isRequired,
+};
+
+const mapStateToProps = (state) => {
+  return {
+    experience: state.experience,
+  };
+};
+
+export default connect(mapStateToProps)(Experience);

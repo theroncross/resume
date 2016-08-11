@@ -72,28 +72,36 @@
   }],
   "skills": [{
       "name": "JavaScript",
-      "rating": 4
+      "rating": 4,
+      "visible": false
     }, {
       "name": "React/Redux",
-      "rating": 2
+      "rating": 2,
+      "visible": false
     }, {
       "name": "HTML5",
-      "rating": 3
+      "rating": 3,
+      "visible": false
     }, {
       "name": "CSS3/SASS",
-      "rating": 3
+      "rating": 3,
+      "visible": false
     }, {
       "name": "Ruby",
-      "rating": 4
+      "rating": 4,
+      "visible": false
     }, {
       "name": "Ruby on Rails",
-      "rating": 3
+      "rating": 3,
+      "visible": false
     }, {
-      "name": "D3",
-      "rating": 2
+      "name": "d3",
+      "rating": 2,
+      "visible": false
     }, {
       "name": "Ember",
-      "rating": 1
+      "rating": 1,
+      "visible": false
   }],
   "projects": [{
     "name": "Resume/Portfolio",

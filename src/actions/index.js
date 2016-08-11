@@ -1,11 +1,6 @@
-import data from 'json!../../data';
-
-const FETCH_SKILLS = 'fetch_skills';
-
-
-export default function fetchSkills() {
+export const toggleSkillBar = (name) => {
   return {
-    type: FETCH_SKILLS,
-    payload: data.skills,
+    type: 'TOGGLE_SKILL_BAR',
+    payload: name,
   };
-}
+};

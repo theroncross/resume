@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import SkillsReducer from './skills_reducer';
+import skills from './skills_reducer';
 
-const rootReducer = combineReducers({
-  skills: SkillsReducer,
+const resume = combineReducers({
+  skills,
 });
 
-export default rootReducer;
+export default resume;

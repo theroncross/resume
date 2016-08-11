@@ -1,10 +1,15 @@
-import { FETCH_SKILLS } from '../actions/index';
-
-export default function (state = [], action) {
+const skills = (state = [], action) => {
   switch (action.type) {
-    case FETCH_SKILLS:
-      return action.payload;
+    case 'TOGGLE_SKILL_BAR':
+      return state.skills.map(skill => {
+        if (skill.name === action.payload) {
+          return {...skill, visible: true};
+        }
+        return skill;
+      });
     default:
       return state;
   }
-}
+};
+
+export default skills;

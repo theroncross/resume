@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
@@ -11,10 +11,13 @@ import Experience from './components/experience';
 import Projects from './components/projects';
 import Skills from './components/skills';
 import './index.css';
-import reducers from './reducers';
+import resume from './reducers';
+import data from 'json!../data.json';
 
-ReactDOM.render(
-  <Provider store={createStore(reducers)}>
+let store = createStore(resume, data);
+
+render(
+  <Provider store={store}>
     <Router history={browserHistory}>
       <Route path="/" component={App}>
         <IndexRoute component={Bio} />
