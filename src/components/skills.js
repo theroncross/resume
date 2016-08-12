@@ -9,6 +9,7 @@ class SkillsContainer extends Component {
 
     return (
       <SkillsChart
+        className="SkillsContainer"
         skills={skills}
       />
     );

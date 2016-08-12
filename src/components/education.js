@@ -1,12 +1,19 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import EducationCard from './education-card';
 
 class Education extends Component {
   renderEducation() {
     return this.props.education.map((school) => {
       return (
         <li key={school.name}>
-          <strong>{school.degree}</strong>{school.name}
+          <EducationCard
+            degree={school.degree}
+            school={school.school}
+            location={school.location}
+            gradDate={school.gradDate}
+            description={school.description}
+          />
         </li>
       );
     });

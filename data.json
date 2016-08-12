@@ -1,74 +1,87 @@
 {
   "education": [{
-    "name": "University of Oregon",
+    "school": "University of Oregon",
     "degree": "BS General Science",
-    "graduation": "",
-    "description": ""
+    "gradDate": "2002",
+    "location": "Eugene, OR",
+    "description": "In addition to completing coursework in the physical and biological sciences, I played saxophone in multiple school bands, worked on the Urban Farm, and prepared lecture demonstrations for Chemistry courses."
   }, {
-    "name": "University of New Orleans",
-    "degree": "Teaching Certificate",
-    "graduation": "",
-    "description": ""
-  }, {
-    "name": "University of Illinois",
+    "school": "University of Illinois",
     "degree": "MA Education Leadership",
-    "graduation": "",
-    "description": ""
+    "gradDate": "2006",
+    "location": "Springfield, IL",
+    "description": "Carried out research on methods for improving teaching practice in a collaborative team, with a focus on student paired learning and empathy."
   }, {
-    "name": "Dev Bootcamp",
-    "degree": "NA",
-    "graduation": "",
-    "description": ""
+    "school": "Dev Bootcamp",
+    "degree": "Web Development Training",
+    "gradDate": "2016",
+    "location": "Chicago, IL",
+    "description": "Dev Bootcamp is a 19-week intensive training program for web developers, rooted in learning full stack development skills and empathetic team cooperation."
   }],
   "experience": [{
     "title": "Physical Science Teacher",
-    "start_date": "",
-    "end_date": "",
+    "startDate": "2003",
+    "endDate": "2004",
     "company": "Walter L. Cohen High School",
     "location": "New Orleans, LA",
     "contributions": []
   }, {
     "title": "Physical Science Teacher",
-    "start_date": "",
-    "end_date": "",
+    "startDate": "2004",
+    "endDate": "2005",
     "company": "Marshfield High School",
     "location": "Coos Bay, OR",
     "contributions": []
   }, {
     "title": "Physics Teacher",
-    "start_date": "",
-    "end_date": "",
+    "startDate": "2005",
+    "endDate": "2006",
     "company": "Roseburg High School",
     "location": "Roseburg, OR",
-    "contributions": []
+    "contributions": [
+      "Delivered challenging district curriculum to diverse student population"
+    ]
   }, {
     "title": "Physics Teacher",
-    "start_date": "",
-    "end_date": "",
+    "startDate": "2006",
+    "endDate": "2008",
     "company": "Lusher Charter High School",
     "location": "New Orleans, LA",
-    "contributions": []
+    "contributions": [
+      "Taught introductory and AP Physics and sustainable design electives",
+      "Founded and maintained the school's urban farm",
+      "Coached Cross Country, Swimming and Track and Field"
+    ]
   }, {
     "title": "Chemistry Teacher",
-    "start_date": "",
-    "end_date": "",
+    "startDate": "2008",
+    "endDate": "2009",
     "company": "Sammamish High School",
     "location": "Bellevue, WA",
-    "contributions": []
+    "contributions": [
+      "Delivered challenging district curriculum to diverse student population"
+    ]
   }, {
     "title": "Physics Teacher",
-    "start_date": "",
-    "end_date": "",
+    "startDate": "2009",
+    "endDate": "2015",
     "company": "Eastside Preparatory School",
     "location": "Kirkland, WA",
-    "contributions": []
+    "contributions": [
+      "Designed and taught courses in physics, programming, and math",
+      "Coached Cross Country and Track and Field",
+      "Co-founded and managed school Makerspace"
+    ]
   }, {
     "title": "Physics Teacher",
-    "start_date": "",
-    "end_date": "",
+    "startDate": "2015",
+    "endDate": "2016",
     "company": "Escuela Campo Alegre",
     "location": "Caracas, Venezuela",
-    "contributions": []
+    "contributions": [
+      "Designed and taught IB Physics and programming electives in an economically and culturally diverse international environment",
+      "Served on committee for complete redesign of core science courses"
+    ]
   }],
   "skills": [{
       "name": "JavaScript",

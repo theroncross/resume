@@ -1,15 +1,20 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import ExperienceCard from './experience-card';
 
 class Experience extends Component {
   renderExperience() {
     return this.props.experience.map((job) => {
       return (
         <li key={job.company}>
-          <div className="experienceCard">
-            <h3>{job.title}</h3>
-            <h4>{job.company} | <em>{job.location}</em></h4>
-          </div>
+          <ExperienceCard
+            title={job.title}
+            company={job.company}
+            location={job.location}
+            startDate={job.startDate}
+            endDate={job.endDate}
+            contributions={job.contributions}
+          />
         </li>
       );
     });
@@ -32,7 +37,7 @@ Experience.propTypes = {
 
 const mapStateToProps = (state) => {
   return {
-    experience: state.experience,
+    experience: state.experience.sort((a, b) => { return (a.endDate < b.endDate) ? 1 : -1; }),
   };
 };
 
