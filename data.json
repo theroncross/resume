@@ -24,14 +24,18 @@
     "endDate": "2004",
     "company": "Walter L. Cohen High School",
     "location": "New Orleans, LA",
-    "contributions": []
+    "contributions": [],
+    "lat": 29.93072,
+    "lng": -90.09469
   }, {
     "title": "Physical Science Teacher",
     "startDate": "2004",
     "endDate": "2005",
     "company": "Marshfield High School",
     "location": "Coos Bay, OR",
-    "contributions": []
+    "contributions": [],
+    "lat": 43.360370,
+    "lng": -124.221318
   }, {
     "title": "Physics Teacher",
     "startDate": "2005",
@@ -40,7 +44,9 @@
     "location": "Roseburg, OR",
     "contributions": [
       "Delivered challenging district curriculum to diverse student population"
-    ]
+    ],
+    "lat": 43.216472,
+    "lng": -123.353720
   }, {
     "title": "Physics Teacher",
     "startDate": "2006",
@@ -51,7 +57,9 @@
       "Taught introductory and AP Physics and sustainable design electives",
       "Founded and maintained the school's urban farm",
       "Coached Cross Country, Swimming and Track and Field"
-    ]
+    ],
+    "lat": 29.935357,
+    "lng": -90.113887
   }, {
     "title": "Chemistry Teacher",
     "startDate": "2008",
@@ -60,7 +68,9 @@
     "location": "Bellevue, WA",
     "contributions": [
       "Delivered challenging district curriculum to diverse student population"
-    ]
+    ],
+    "lat": 47.609044,
+    "lng": -122.152562
   }, {
     "title": "Physics Teacher",
     "startDate": "2009",
@@ -71,7 +81,9 @@
       "Designed and taught courses in physics, programming, and math",
       "Coached Cross Country and Track and Field",
       "Co-founded and managed school Makerspace"
-    ]
+    ],
+    "lat": 47.643570,
+    "lng": -122.198578
   }, {
     "title": "Physics Teacher",
     "startDate": "2015",
@@ -81,7 +93,9 @@
     "contributions": [
       "Designed and taught IB Physics and programming electives in an economically and culturally diverse international environment",
       "Served on committee for complete redesign of core science courses"
-    ]
+    ],
+    "lat": 10.482138,
+    "lng": -66.869273
   }],
   "skills": [{
       "name": "JavaScript",

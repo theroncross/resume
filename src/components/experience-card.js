@@ -1,36 +1,41 @@
 import React from 'react';
+import Container from './Map';
 
-const ExperienceCard = ({
-    title,
-    company,
-    startDate,
-    endDate,
-    location,
-    contributions }) => {
+const ExperienceCard = (props) => {
   return (
     <div className="ExperienceCard">
-      <h3 className="title">{title}</h3>
+      <h3 className="title">{props.title}</h3>
       <ul className="experienceDetails">
-        <li><h4 className="company">{company}</h4></li>
-        <li><h4 className="location">{location}</h4></li>
-        <li><h4 className="dates">{startDate}-{endDate}</h4></li>
+        <li><h4 className="company">{props.company}</h4></li>
+        <li><h4 className="location">{props.location}</h4></li>
+        <li><h4 className="dates">{props.startDate}-{props.endDate}</h4></li>
       </ul>
       <ul className="contributions">
-        {contributions.map((c) => {
-          return <li>> {c}</li>;
+        {props.contributions.map((c, i) => {
+          return <li key={i}>> {c}</li>;
         })}
       </ul>
+      <div className="map-container">
+        <Container
+          className="map"
+          google={window.google}
+          lat={props.lat}
+          lng={props.lng}
+        />
+      </div>
     </div>
   );
 };
 
+const { string, arrayOf } = React.PropTypes;
+
 ExperienceCard.propTypes = {
-  title: React.PropTypes.string.isRequired,
-  company: React.PropTypes.string.isRequired,
-  startDate: React.PropTypes.string.isRequired,
-  endDate: React.PropTypes.string.isRequired,
-  location: React.PropTypes.string.isRequired,
-  contributions: React.PropTypes.array.isRequired,
+  title: string.isRequired,
+  company: string.isRequired,
+  startDate: string.isRequired,
+  endDate: string.isRequired,
+  location: string.isRequired,
+  contributions: arrayOf(string).isRequired,
 };
 
 export default ExperienceCard;

@@ -12,10 +12,14 @@
     "react-scripts": "0.2.1"
   },
   "dependencies": {
+    "axios": "^0.13.1",
     "d3": "^4.2.1",
+    "google-maps": "^3.2.1",
+    "google-maps-react": "^1.0.18",
     "json-loader": "^0.5.4",
     "react": "^15.2.1",
     "react-dom": "^15.2.1",
+    "react-google-maps": "^4.11.0",
     "react-redux": "^4.4.5",
     "react-router": "^2.6.1",
     "redux": "^3.5.2"

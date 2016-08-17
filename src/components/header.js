@@ -9,7 +9,7 @@ class Header extends Component {
         <ContactCard />
         <ul className="nav-bar">
           <li key="experience">
-            <Link to="/experience">Experience</Link>
+            <Link to="/">Experience</Link>
           </li>
           <li key="education">
             <Link to="/education">Education</Link>
