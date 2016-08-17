@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import data from 'json!../../data';
+import { connect } from 'react-redux';
 
 class Project extends Component {
   renderProject() {
-    return data.projects.map((project) => {
+    return this.props.projects.map((project) => {
       return (
         <li key={project.name}>
           <div>
@@ -26,4 +26,10 @@ class Project extends Component {
   }
 }
 
-export default Project;
+const mapStateToProps = (state) => {
+  return {
+    projects: state.projects,
+  };
+};
+
+export default connect(mapStateToProps)(Project);

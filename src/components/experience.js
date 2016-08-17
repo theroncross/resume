@@ -1,15 +1,20 @@
 import React, { Component } from 'react';
-import data from 'json!../../data';
+import { connect } from 'react-redux';
+import ExperienceCard from './experience-card';
 
 class Experience extends Component {
   renderExperience() {
-    return data.experience.map((job) => {
+    return this.props.experience.map((job) => {
       return (
         <li key={job.company}>
-          <div className="experienceCard">
-            <h3>{job.title}</h3>
-            <h4>{job.company} | <em>{job.location}</em></h4>
-          </div>
+          <ExperienceCard
+            title={job.title}
+            company={job.company}
+            location={job.location}
+            startDate={job.startDate}
+            endDate={job.endDate}
+            contributions={job.contributions}
+          />
         </li>
       );
     });
@@ -26,4 +31,14 @@ class Experience extends Component {
   }
 }
 
-export default Experience;
+Experience.propTypes = {
+  experience: React.PropTypes.array.isRequired,
+};
+
+const mapStateToProps = (state) => {
+  return {
+    experience: state.experience.sort((a, b) => { return (a.endDate < b.endDate) ? 1 : -1; }),
+  };
+};
+
+export default connect(mapStateToProps)(Experience);

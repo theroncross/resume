@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import * as d3 from 'd3';
-import data from 'json!../../data';
+import Bar from './bar';
 
 class SkillsChart extends Component {
   constructor(props) {
@@ -11,8 +11,8 @@ class SkillsChart extends Component {
     this.translate = this.translate.bind(this);
   }
 
-  translate(rating, i) {
-    return `translate(0, ${i * this.props.barHeight})`;
+  translate(i) {
+    return `translate(0, ${i * this.props.height})`;
   }
 
   scale(val) {
@@ -22,33 +22,31 @@ class SkillsChart extends Component {
   }
 
   renderBars() {
-    return this.props.skillsData.map((skill, i) => {
+    return this.props.skills.map((skill, i) => {
       return (
-        <g transform={this.translate(skill.rating, i)} key={skill.name}>
-          <rect
-            width={this.scale(skill.rating)}
-            height={this.props.barHeight - 1}
-            fill="steelblue"
-          />
-          <text
-            x={this.scale(skill.rating - 0.2)}
-            y={this.props.barHeight / 2}
-            dy=".35em"
-            fill="white"
-          >
-            {skill.name}
-          </text>
-        </g>
+        <Bar
+          key={skill.name}
+          id={skill.name}
+          transform={this.translate(i)}
+          width={this.scale(skill.rating)}
+          height={this.props.height}
+          fill={this.props.fill}
+          x={this.scale(skill.rating - 0.2)}
+          y={this.props.height / 2}
+          text={skill.name}
+        />
       );
     });
   }
 
   render() {
+    const { skills } = this.props;
+
     return (
       <svg
         className="SkillsChart"
         width={this.scale(5)}
-        height={this.props.barHeight * this.props.skillsData.length}
+        height={this.props.height * skills.length}
       >
         {this.renderBars()}
       </svg>
@@ -57,22 +55,16 @@ class SkillsChart extends Component {
 }
 
 SkillsChart.propTypes = {
-  skillsData: React.PropTypes.array,
-  width: React.PropTypes.number.isRequired,
-  barHeight: React.PropTypes.number.isRequired,
+  skills: React.PropTypes.array,
+  width: React.PropTypes.string.isRequired,
+  height: React.PropTypes.string.isRequired,
+  fill: React.PropTypes.string.isRequired,
 };
 
 SkillsChart.defaultProps = {
-  skillsData: data.skills.map((skill) => {
-    return {
-      name: skill.name,
-      rating: skill.rating,
-    };
-  }).sort((a, b) => {
-    return a.rating < b.rating ? 1 : -1;
-  }),
-  width: 90,
-  barHeight: 20,
+  width: '90',
+  height: '20',
+  fill: 'steelblue',
 };
 
 export default SkillsChart;
