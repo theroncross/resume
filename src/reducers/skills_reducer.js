@@ -3,7 +3,7 @@ const skills = (state = [], action) => {
     case 'TOGGLE_SKILL_BAR':
       return state.skills.map(skill => {
         if (skill.name === action.payload) {
-          return {...skill, visible: true};
+          return Object.assign(skill, { visible: true });
         }
         return skill;
       });

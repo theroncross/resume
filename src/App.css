@@ -1,5 +1,5 @@
 #root, .App {
-  max-width: 730px;
+  max-width: 850px;
   margin: auto;
 }
 
@@ -75,28 +75,45 @@ h3, h4 {
 }
 
 .EducationCard, .ExperienceCard {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
   background-color: #EEE;
   padding: 10px 20px;
   margin: 0 10px 10px;
 }
 
 .schoolDetails, .experienceDetails {
-  width: 85%;
+  width: 65%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 0;
+  margin: 10px 0;
   opacity: .5;
 }
-
-.EducationCard h3, p {
-  margin: 5px 0;
-}
-
-.ExperienceCard h3, p {
-  margin: 5px 0;
+.ExperienceCard h3,
+.EducationCard h3,
+.ExperienceCard p,
+.EducationCard p {
+  margin: 5px;
 }
 
 .contributions {
-  padding: 5px 0;
+  width: 65%;
+}
+
+.contributions li {
+  margin: 10px auto;
+}
+
+.map-container, .map-container div {
+  width: 150px !important;
+  height: 150px !important;
+}
+
+.map-container {
+  margin: auto;
 }

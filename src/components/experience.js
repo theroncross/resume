@@ -7,14 +7,7 @@ class Experience extends Component {
     return this.props.experience.map((job) => {
       return (
         <li key={job.company}>
-          <ExperienceCard
-            title={job.title}
-            company={job.company}
-            location={job.location}
-            startDate={job.startDate}
-            endDate={job.endDate}
-            contributions={job.contributions}
-          />
+          <ExperienceCard {...job} />
         </li>
       );
     });
