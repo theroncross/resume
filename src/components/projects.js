@@ -17,7 +17,7 @@ class Project extends Component {
 
   render() {
     return (
-      <div className="Project">
+      <div className="Project card-list">
         <ul>
           {this.renderProject()}
         </ul>

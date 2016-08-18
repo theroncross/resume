@@ -1,5 +1,5 @@
 import React from 'react';
 
-const Sidebar = () => <div>Sidebar</div>;
+const Sidebar = () => <div className="Sidebar">Sidebar</div>;
 
 export default Sidebar;
