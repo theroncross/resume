@@ -3,9 +3,9 @@ import Container from './Map';
 
 const ExperienceCard = (props) => {
   return (
-    <div className="ExperienceCard">
+    <div className="card">
       <h3 className="title">{props.title}</h3>
-      <ul className="experienceDetails">
+      <ul className="details">
         <li><h4 className="company">{props.company}</h4></li>
         <li><h4 className="location">{props.location}</h4></li>
         <li><h4 className="dates">{props.startDate}-{props.endDate}</h4></li>

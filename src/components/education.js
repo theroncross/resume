@@ -21,7 +21,7 @@ class Education extends Component {
 
   render() {
     return (
-      <div className="Education">
+      <div className="Education card-list">
         <ul>
           {this.renderEducation()}
         </ul>

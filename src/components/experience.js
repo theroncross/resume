@@ -15,7 +15,7 @@ class Experience extends Component {
 
   render() {
     return (
-      <div className="Experience">
+      <div className="Experience card-list">
         <ul>
           {this.renderExperience()}
         </ul>

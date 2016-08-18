@@ -7,9 +7,9 @@ const EducationCard = ({
     location,
     description }) => {
   return (
-    <div className="EducationCard">
+    <div className="card">
       <h3 className="degree">{degree}</h3>
-      <ul className="schoolDetails">
+      <ul className="details">
         <li><h4 className="school">{school}</h4></li>
         <li><h4 className="location">{location}</h4></li>
         <li><h4 className="gradDate">{gradDate}</h4></li>
