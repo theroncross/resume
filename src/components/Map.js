@@ -7,7 +7,7 @@ const Container = (props) => {
     <Map
       google={props.google}
       center={{ lat: props.lat, lng: props.lng }}
-      style={{ width: '150px', height: '150px' }}
+      style={{ width: '300px', height: '150px' }}
       zoom={10}
       containerStyle={{}}
     />

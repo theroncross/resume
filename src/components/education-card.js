@@ -1,30 +1,24 @@
 import React from 'react';
+import Card from './Card';
 
-const EducationCard = ({
-    school,
-    degree,
-    gradDate,
-    location,
-    description }) => {
+const EducationCard = (props) => {
   return (
-    <div className="card">
-      <h3 className="degree">{degree}</h3>
-      <ul className="details">
-        <li><h4 className="school">{school}</h4></li>
-        <li><h4 className="location">{location}</h4></li>
-        <li><h4 className="gradDate">{gradDate}</h4></li>
-      </ul>
-      <p className="description">{description}</p>
-    </div>
+    <Card
+      title={props.degree}
+      details={[props.school, props.location, props.gradDate]}
+      accomplishments={[props.description]}
+    />
   );
 };
 
+const { string } = React.PropTypes;
+
 EducationCard.propTypes = {
-  school: React.PropTypes.string.isRequired,
-  degree: React.PropTypes.string.isRequired,
-  gradDate: React.PropTypes.string.isRequired,
-  location: React.PropTypes.string.isRequired,
-  description: React.PropTypes.string.isRequired,
+  school: string.isRequired,
+  degree: string.isRequired,
+  gradDate: string.isRequired,
+  location: string.isRequired,
+  description: string.isRequired,
 };
 
 export default EducationCard;

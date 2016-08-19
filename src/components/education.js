@@ -1,34 +1,20 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import EducationCard from './education-card';
+import List from './List';
 
-class Education extends Component {
-  renderEducation() {
-    return this.props.education.map((school) => {
-      return (
-        <li key={school.name}>
-          <EducationCard
-            degree={school.degree}
-            school={school.school}
-            location={school.location}
-            gradDate={school.gradDate}
-            description={school.description}
-          />
-        </li>
-      );
-    });
-  }
-
-  render() {
-    return (
-      <div className="Education card-list">
-        <ul>
-          {this.renderEducation()}
-        </ul>
-      </div>
-    );
-  }
-}
+const Education = (props) => {
+  return (
+    <List
+      items={props.education.map((school) => {
+        return <EducationCard {...school} />;
+      })}
+      tag="div"
+      direction="column"
+      width="65%"
+    />
+  );
+};
 
 Education.propTypes = {
   education: React.PropTypes.array.isRequired,

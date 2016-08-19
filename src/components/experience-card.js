@@ -1,20 +1,14 @@
 import React from 'react';
 import Container from './Map';
+import Card from './Card';
 
 const ExperienceCard = (props) => {
   return (
-    <div className="card">
-      <h3 className="title">{props.title}</h3>
-      <ul className="details">
-        <li><h4 className="company">{props.company}</h4></li>
-        <li><h4 className="location">{props.location}</h4></li>
-        <li><h4 className="dates">{props.startDate}-{props.endDate}</h4></li>
-      </ul>
-      <ul className="contributions">
-        {props.contributions.map((c, i) => {
-          return <li key={i}>> {c}</li>;
-        })}
-      </ul>
+    <Card
+      title={props.title}
+      details={[props.company, props.location, `${props.startDate}-${props.endDate}`]}
+      accomplishments={props.contributions}
+    >
       <div className="map-container">
         <Container
           className="map"
@@ -23,7 +17,7 @@ const ExperienceCard = (props) => {
           lng={props.lng}
         />
       </div>
-    </div>
+    </Card>
   );
 };
 
@@ -36,6 +30,8 @@ ExperienceCard.propTypes = {
   endDate: string.isRequired,
   location: string.isRequired,
   contributions: arrayOf(string).isRequired,
+  lat: string,
+  lng: string,
 };
 
 export default ExperienceCard;

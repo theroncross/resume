@@ -1,28 +1,21 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import ExperienceCard from './experience-card';
+import List from './List';
 
-class Experience extends Component {
-  renderExperience() {
-    return this.props.experience.map((job) => {
-      return (
-        <li key={job.company}>
-          <ExperienceCard {...job} />
-        </li>
-      );
-    });
-  }
+const Experience = (props) => {
+  return (
+    <List
+      items={props.experience.map((job) => {
+        return <ExperienceCard {...job} />;
+      })}
+      direction="column"
+      width="70%"
+      padding="0"
+    />
+  );
+};
 
-  render() {
-    return (
-      <div className="Experience card-list">
-        <ul>
-          {this.renderExperience()}
-        </ul>
-      </div>
-    );
-  }
-}
 
 Experience.propTypes = {
   experience: React.PropTypes.array.isRequired,
