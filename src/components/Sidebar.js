@@ -10,21 +10,22 @@ const Sidebar = () => {
     <Link to="/skills">Skills</Link>,
     <Link to="/projects">Projects</Link>,
   ];
+  const sidebarStyle = {
+    width: '23%',
+    minWidth: '200px',
+    flexDirection: 'column',
+    alignItems: 'center',
+    backgroundColor: '#eee',
+  };
+  const navStyle = {
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+  };
 
   return (
-    <Flex
-      width="25%"
-      flexDirection="column"
-      justifyContent="flex-start"
-      padding="28px 0"
-    >
+    <Flex style={sidebarStyle} >
       <h3>Learn more</h3>
-      <List
-        items={routes}
-        flexDirection="column"
-        height="80px"
-        justifyContent="space-between"
-      />
+      <List items={routes} style={navStyle} />
     </Flex>
   );
 };

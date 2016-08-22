@@ -3,10 +3,12 @@ import React from 'react';
 import Map, { GoogleApiWrapper as wrapper } from 'google-maps-react';
 
 const Container = (props) => {
+  const { google, lat, lng } = props;
+
   return (
     <Map
-      google={props.google}
-      center={{ lat: props.lat, lng: props.lng }}
+      google={google}
+      center={{ lat, lng }}
       style={{ width: '300px', height: '150px' }}
       zoom={10}
       containerStyle={{}}

@@ -3,25 +3,27 @@ import Container from './Map';
 import Card from './Card';
 
 const ExperienceCard = (props) => {
+  const { title, company, location, startDate, endDate, contributions, lat, lng } = props;
+
   return (
     <Card
-      title={props.title}
-      details={[props.company, props.location, `${props.startDate}-${props.endDate}`]}
-      accomplishments={props.contributions}
+      title={title}
+      details={[company, location, `${startDate}-${endDate}`]}
+      accomplishments={contributions}
     >
       <div className="map-container">
         <Container
           className="map"
           google={window.google}
-          lat={props.lat}
-          lng={props.lng}
+          lat={lat}
+          lng={lng}
         />
       </div>
     </Card>
   );
 };
 
-const { string, arrayOf } = React.PropTypes;
+const { string, number, arrayOf } = React.PropTypes;
 
 ExperienceCard.propTypes = {
   title: string.isRequired,
@@ -30,8 +32,8 @@ ExperienceCard.propTypes = {
   endDate: string.isRequired,
   location: string.isRequired,
   contributions: arrayOf(string).isRequired,
-  lat: string,
-  lng: string,
+  lat: number,
+  lng: number,
 };
 
 export default ExperienceCard;

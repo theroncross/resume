@@ -4,14 +4,18 @@ import ExperienceCard from './experience-card';
 import List from './List';
 
 const Experience = (props) => {
+  const listStyle = {
+    flexDirection: 'column',
+    alignItems: 'center',
+    width: '73%',
+  };
+
   return (
     <List
-      items={props.experience.map((job) => {
-        return <ExperienceCard {...job} />;
+      items={props.experience.map((job, i) => {
+        return <ExperienceCard {...job} key={i} />;
       })}
-      direction="column"
-      width="70%"
-      padding="0"
+      style={listStyle}
     />
   );
 };
@@ -23,7 +27,8 @@ Experience.propTypes = {
 
 const mapStateToProps = (state) => {
   return {
-    experience: state.experience.sort((a, b) => { return (a.endDate < b.endDate) ? 1 : -1; }),
+    experience: state.experience
+      .sort((a, b) => { return (a.endDate < b.endDate) ? 1 : -1; }),
   };
 };
 

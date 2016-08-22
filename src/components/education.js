@@ -4,14 +4,18 @@ import EducationCard from './education-card';
 import List from './List';
 
 const Education = (props) => {
+  const listStyle = {
+    flexDirection: 'column',
+    alignItems: 'center',
+    width: '73%',
+  };
+
   return (
     <List
-      items={props.education.map((school) => {
-        return <EducationCard {...school} />;
+      items={props.education.map((school, i) => {
+        return <EducationCard {...school} key={i} />;
       })}
-      tag="div"
-      direction="column"
-      width="65%"
+      style={listStyle}
     />
   );
 };

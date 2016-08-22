@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Flex = ({
+const Flex = (props) => {
+  const {
     width,
-    height,
     flexDirection,
     flexWrap,
     justifyContent,
@@ -11,11 +11,11 @@ const Flex = ({
     margin,
     background,
     children,
-  }) => {
-  const sx = {
+    style,
+  } = props;
+  const flexStyle = {
     display: 'flex',
     width,
-    height,
     flexDirection,
     flexWrap,
     justifyContent,
@@ -23,28 +23,29 @@ const Flex = ({
     padding,
     margin,
     background,
+    ...style,
   };
 
   return (
-    <div style={sx}>
+    <div style={flexStyle}>
       {children}
     </div>
   );
 };
 
-const { string, array } = React.PropTypes;
+const { string, object, array } = React.PropTypes;
 
 Flex.propTypes = {
   children: array,
   width: string,
-  height: string,
   flexDirection: string,
   flexWrap: string,
   justifyContent: string,
   alignItems: string,
-  margin: string,
   padding: string,
+  margin: string,
   background: string,
+  style: object,
 };
 
 Flex.defaultProps = {
@@ -52,10 +53,10 @@ Flex.defaultProps = {
   flexDirection: 'row',
   flexWrap: 'wrap',
   justifyContent: 'space-between',
-  alignItems: 'center',
+  alignItems: 'inherit',
   padding: '0',
-  margin: '5',
-  background: '#eee',
+  margin: '0',
+  background: 'inherit',
 };
 
 export default Flex;

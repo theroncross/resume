@@ -3,16 +3,28 @@ import List from './List';
 import Flex from './Flex';
 
 const Card = (props) => {
+  const { title, details, accomplishments, children, style } = props;
+  const cardStyle = {
+    ...style,
+    width: '90%',
+    margin: "0 0 10px",
+    padding: '0 3%',
+    backgroundColor: "#eee",
+  }
+
   return (
-    <Flex {...props} margin="5px 0" >
-      <h3>{props.title}</h3>
-      <List tag="h4" items={props.details} />
+    <Flex style={cardStyle}>
+      <h2>{title}</h2>
       <List
-        items={props.accomplishments}
-        tag="p"
-        justifyContent="flex-start"
+        items={details}
+        tag="h4"
       />
-      {props.children}
+      <List
+        items={accomplishments}
+        tag="p"
+        style={{ justifyContent:"flex-start" }}
+      />
+      {children}
     </Flex>
   );
 };

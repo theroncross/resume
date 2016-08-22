@@ -1,27 +1,33 @@
 import React from 'react';
 import Flex from './Flex';
 
-const List = ({ items, tag, color, ...props }) => {
+const List = (props) => {
+  const { items, tag, itemStyle, style } = props;
   const Tag = tag;
+  let contents;
+
+  if (Tag) {
+    contents = items.map((item, i) => {
+      return <Tag key={i} style={itemStyle} >{item}</Tag>;
+    });
+  } else {
+    contents = items;
+  }
 
   return (
-    <Flex {...props} >
-      {items.map((item, i) => {
-        return <Tag key={i} >{item}</Tag>;
-      })}
+    <Flex style={style} >
+      {contents}
     </Flex>
   );
 };
 
-const { array, string } = React.PropTypes;
+const { string, array, object } = React.PropTypes;
 
 List.propTypes = {
   items: array.isRequired,
-  tag: string.isRequired,
-};
-
-List.defaultProps = {
-  tag: 'div',
+  tag: string,
+  itemStyle: object,
+  style: object,
 };
 
 export default List;

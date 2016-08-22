@@ -1,11 +1,6 @@
-#root, .App {
+#root {
   max-width: 850px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   margin: auto;
-  justify-content: space-around;
-  background-color: #ddd;
 }
 
 a {

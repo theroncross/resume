@@ -2,11 +2,13 @@ import React from 'react';
 import Card from './Card';
 
 const EducationCard = (props) => {
+  const { degree, school, location, gradDate, description } = props;
+
   return (
     <Card
-      title={props.degree}
-      details={[props.school, props.location, props.gradDate]}
-      accomplishments={[props.description]}
+      title={degree}
+      details={[school, location, gradDate]}
+      accomplishments={[description]}
     />
   );
 };
