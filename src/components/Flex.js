@@ -33,10 +33,10 @@ const Flex = (props) => {
   );
 };
 
-const { string, object, array } = React.PropTypes;
+const { string, object, node } = React.PropTypes;
 
 Flex.propTypes = {
-  children: array,
+  children: node,
   width: string,
   flexDirection: string,
   flexWrap: string,

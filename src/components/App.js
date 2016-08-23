@@ -3,12 +3,13 @@ import Header from './header';
 import Sidebar from './Sidebar';
 import '../App.css';
 import Flex from './Flex';
+import { colors } from './styles';
 
 const App = (props) => {
   const appStyle = {
     alignItems: 'flex-start',
-    justifyContent: 'space-between',
-    backgroundColor: 'white',
+    justifyContent: 'space-around',
+    backgroundColor: colors.light,
   };
 
   return (

@@ -7,7 +7,7 @@ const Education = (props) => {
   const listStyle = {
     flexDirection: 'column',
     alignItems: 'center',
-    width: '73%',
+    width: '75%',
   };
 
   return (

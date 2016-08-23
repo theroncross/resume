@@ -4,14 +4,18 @@ import Map, { GoogleApiWrapper as wrapper } from 'google-maps-react';
 
 const Container = (props) => {
   const { google, lat, lng } = props;
+  const mapStyle = {
+    width: '250px',
+    height: '150px',
+  };
 
   return (
     <Map
       google={google}
       center={{ lat, lng }}
-      style={{ width: '300px', height: '150px' }}
+      style={mapStyle}
       zoom={10}
-      containerStyle={{}}
+      containerStyle={mapStyle}
     />
   );
 };

@@ -23,7 +23,7 @@ const Skills = (props) => {
 
   return (
     <Flex
-      width="73%"
+      width="75%"
       justifyContent="space-around"
     >
       <div>

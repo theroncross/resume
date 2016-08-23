@@ -1,6 +1,7 @@
 import React from 'react';
 import Flex from './Flex';
 import List from './List';
+import { colors } from './styles';
 
 const Header = () => {
   const links = [
@@ -13,11 +14,12 @@ const Header = () => {
     alignItems: 'center',
     margin: '0 0 10px',
     padding: '15px 0',
-    backgroundColor: '#eee',
+    backgroundColor: colors.light,
+    borderBottom: `1px solid ${colors.accent}`,
   };
   const linkStyle = {
     width: '40%',
-    padding: '15px 0',
+    padding: '10px 0',
     justifyContent: 'space-between',
   };
 
@@ -25,7 +27,7 @@ const Header = () => {
     <Flex style={headerStyle} >
       <h2>Theron Cross</h2>
       <h4>theroncross@gmail.com</h4>
-      <List items={links} tag="button" style={linkStyle} />
+      <List items={links} style={linkStyle} />
     </Flex>
   );
 };

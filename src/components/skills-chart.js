@@ -23,7 +23,7 @@ const SkillsChart = (props) => {
         <CartesianGrid strokeDasharray="3 3" />
         <Tooltip />
         <Legend />
-        <Bar dataKey="rating" fill={colors.charcoal} label={{ fill: colors.gold }} />
+        <Bar dataKey="rating" fill={colors.accent} label={{ fill: colors.dark }} />
       </BarChart>
     </ResponsiveContainer>
   );

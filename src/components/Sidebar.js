@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 import Flex from './Flex';
 import List from './List';
 import Bio from './bio';
+import { colors } from './styles';
 
 const Sidebar = () => {
   const routes = [
@@ -12,10 +13,13 @@ const Sidebar = () => {
     <Link to="/projects">Projects</Link>,
   ];
   const sidebarStyle = {
-    width: '23%',
+    width: '90%',
+    minWidth: '200px',
+    margin: '0 0 10px',
+    padding: '0 3%',
     flexDirection: 'column',
     alignItems: 'center',
-    backgroundColor: '#eee',
+    backgroundColor: colors.light,
   };
   const navStyle = {
     flexDirection: 'column',
@@ -23,10 +27,12 @@ const Sidebar = () => {
   };
 
   return (
-    <Flex style={sidebarStyle} >
-      <h3>Learn more</h3>
-      <List items={routes} style={navStyle} />
-      <Bio />
+    <Flex style={{ width: '25%', justifyContent: 'center' }}>
+      <Flex style={sidebarStyle} >
+        <h3>Learn more</h3>
+        <List items={routes} style={navStyle} />
+        <Bio />
+      </Flex>
     </Flex>
   );
 };

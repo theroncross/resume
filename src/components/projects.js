@@ -1,30 +1,30 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
+import ProjectCard from './project-card';
+import List from './List';
 
-class Project extends Component {
-  renderProject() {
-    return this.props.projects.map((project) => {
-      return (
-        <li key={project.name}>
-          <div>
-            <a href={project.url}><strong>{project.name}</strong></a>
-            {project.description}
-          </div>
-        </li>
-      );
-    });
-  }
+const Projects = (props) => {
+  const listStyle = {
+    flexDirection: 'column',
+    alignItems: 'center',
+    width: '75%',
+  };
 
-  render() {
-    return (
-      <div className="Project card-list">
-        <ul>
-          {this.renderProject()}
-        </ul>
-      </div>
-    );
-  }
-}
+  return (
+    <List
+      style={listStyle}
+      items={props.projects.map((project, i) => {
+        return <ProjectCard {...project} key={i} />;
+      })}
+    />
+  );
+};
+
+const { arrayOf, object } = React.PropTypes;
+
+Projects.propTypes = {
+  projects: arrayOf(object).isRequired,
+};
 
 const mapStateToProps = (state) => {
   return {
@@ -32,4 +32,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps)(Project);
+export default connect(mapStateToProps)(Projects);

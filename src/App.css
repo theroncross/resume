@@ -1,3 +1,8 @@
+* {
+  margin: 5px 0;
+  padding: 0;
+}
+
 #root {
   max-width: 850px;
   margin: auto;
@@ -5,32 +10,15 @@
 
 a {
   text-decoration: none;
+  color: #373737;
 }
 
 p {
   margin: 10px 0;
 }
 
-.SkillsContainer {
-  width: 50%;
-}
-
-.Skills {
-  background-color: #eee;
-}
-
-.SkillsChart {
-  margin: 10px;
-}
-
-.SkillsChart text {
-  fill: white;
-  font: 10px sans-serif;
-  text-anchor: end;
-}
-
 .map-container, .map-container div {
-  width: 300px !important;
+  width: 250px !important;
   height: 150px !important;
 }
 

@@ -9,8 +9,9 @@ const Card = (props) => {
     ...style,
     width: '90%',
     margin: "0 0 10px",
-    padding: '0 3%',
-    backgroundColor: colors.tan,
+    padding: '3%',
+    backgroundColor: colors.light,
+    borderBottom: `1px solid ${colors.accent}`,
   }
 
   return (
