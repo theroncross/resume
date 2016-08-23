@@ -1,19 +1,25 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Header from './header';
 import Sidebar from './Sidebar';
 import '../App.css';
+import Flex from './Flex';
+import { colors } from './styles';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <Header className="header" />
-        <Sidebar className="sidebar" />
-        {this.props.children}
-      </div>
-    );
-  }
-}
+const App = (props) => {
+  const appStyle = {
+    alignItems: 'flex-start',
+    justifyContent: 'space-around',
+    backgroundColor: colors.light,
+  };
+
+  return (
+    <Flex style={appStyle} >
+      <Header />
+      <Sidebar />
+      {props.children}
+    </Flex>
+  );
+};
 
 App.propTypes = {
   children: React.PropTypes.element.isRequired,

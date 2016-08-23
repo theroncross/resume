@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Bio extends Component {
-  render() {
-    return (
-      <div>Bio coming soon!</div>
-    );
-  }
-}
+const Bio = () => {
+  return (
+    <p>
+      Creating effective learning experiences for my students has been my passion and professional focus for the past 13 years. Building high-quality software requires similar levels of empathy, adaptability, attention to detail, and collaboration. I look forward to putting these personal strengths to work for you.
+    </p>
+  );
+};
 
 export default Bio;

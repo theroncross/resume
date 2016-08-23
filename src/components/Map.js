@@ -3,13 +3,19 @@ import React from 'react';
 import Map, { GoogleApiWrapper as wrapper } from 'google-maps-react';
 
 const Container = (props) => {
+  const { google, lat, lng } = props;
+  const mapStyle = {
+    width: '250px',
+    height: '150px',
+  };
+
   return (
     <Map
-      google={props.google}
-      center={{ lat: props.lat, lng: props.lng }}
-      style={{ width: '150px', height: '150px' }}
+      google={google}
+      center={{ lat, lng }}
+      style={mapStyle}
       zoom={10}
-      containerStyle={{}}
+      containerStyle={mapStyle}
     />
   );
 };

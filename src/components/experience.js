@@ -1,28 +1,25 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import ExperienceCard from './experience-card';
+import List from './List';
 
-class Experience extends Component {
-  renderExperience() {
-    return this.props.experience.map((job) => {
-      return (
-        <li key={job.company}>
-          <ExperienceCard {...job} />
-        </li>
-      );
-    });
-  }
+const Experience = (props) => {
+  const listStyle = {
+    flexDirection: 'column',
+    alignItems: 'center',
+    width: '75%',
+  };
 
-  render() {
-    return (
-      <div className="Experience card-list">
-        <ul>
-          {this.renderExperience()}
-        </ul>
-      </div>
-    );
-  }
-}
+  return (
+    <List
+      items={props.experience.map((job, i) => {
+        return <ExperienceCard {...job} key={i} />;
+      })}
+      style={listStyle}
+    />
+  );
+};
+
 
 Experience.propTypes = {
   experience: React.PropTypes.array.isRequired,
@@ -30,7 +27,8 @@ Experience.propTypes = {
 
 const mapStateToProps = (state) => {
   return {
-    experience: state.experience.sort((a, b) => { return (a.endDate < b.endDate) ? 1 : -1; }),
+    experience: state.experience
+      .sort((a, b) => { return (a.endDate < b.endDate) ? 1 : -1; }),
   };
 };
 

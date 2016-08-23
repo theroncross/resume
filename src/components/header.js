@@ -1,29 +1,35 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router';
-import ContactCard from './contact-card';
+import React from 'react';
+import Flex from './Flex';
+import List from './List';
+import { colors } from './styles';
 
-class Header extends Component {
-  render() {
-    return (
-      <div className="Header">
-        <ContactCard />
-        <ul className="nav-bar">
-          <li key="experience">
-            <Link to="/">Experience</Link>
-          </li>
-          <li key="education">
-            <Link to="/education">Education</Link>
-          </li>
-          <li key="skills">
-            <Link to="/skills">Skills</Link>
-          </li>
-          <li key="projects">
-            <Link to="/projects">Projects</Link>
-          </li>
-        </ul>
-      </div>
-    );
-  }
-}
+const Header = () => {
+  const links = [
+    <a href="https://github.com/theroncross">Github</a>,
+    <a href="https://www.linkedin.com/in/theroncross">LinkedIn</a>,
+    <a href="https://twitter.com/theroncross">Twitter</a>,
+  ];
+  const headerStyle = {
+    flexDirection: 'column',
+    alignItems: 'center',
+    margin: '0 0 10px',
+    padding: '15px 0',
+    backgroundColor: colors.light,
+    borderBottom: `1px solid ${colors.accent}`,
+  };
+  const linkStyle = {
+    width: '40%',
+    padding: '10px 0',
+    justifyContent: 'space-between',
+  };
+
+  return (
+    <Flex style={headerStyle} >
+      <h2>Theron Cross</h2>
+      <h4>theroncross@gmail.com</h4>
+      <List items={links} style={linkStyle} />
+    </Flex>
+  );
+};
 
 export default Header;
