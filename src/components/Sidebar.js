@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 import Flex from './Flex';
 import List from './List';
+import Bio from './bio';
 
 const Sidebar = () => {
   const routes = [
@@ -12,7 +13,6 @@ const Sidebar = () => {
   ];
   const sidebarStyle = {
     width: '23%',
-    minWidth: '200px',
     flexDirection: 'column',
     alignItems: 'center',
     backgroundColor: '#eee',
@@ -26,6 +26,7 @@ const Sidebar = () => {
     <Flex style={sidebarStyle} >
       <h3>Learn more</h3>
       <List items={routes} style={navStyle} />
+      <Bio />
     </Flex>
   );
 };

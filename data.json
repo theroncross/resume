@@ -97,39 +97,45 @@
     "lat": 10.482138,
     "lng": -66.869273
   }],
-  "skills": [{
-      "name": "JavaScript",
-      "rating": 4,
-      "visible": false
-    }, {
-      "name": "React/Redux",
-      "rating": 2,
-      "visible": false
-    }, {
-      "name": "HTML5",
-      "rating": 3,
-      "visible": false
-    }, {
-      "name": "CSS3/SASS",
-      "rating": 3,
-      "visible": false
-    }, {
-      "name": "Ruby",
-      "rating": 4,
-      "visible": false
-    }, {
-      "name": "Ruby on Rails",
-      "rating": 3,
-      "visible": false
-    }, {
-      "name": "d3",
-      "rating": 2,
-      "visible": false
-    }, {
-      "name": "Ember",
-      "rating": 1,
-      "visible": false
-  }],
+  "skills": {
+    "sortCriterion": "name",
+    "data": [
+      {
+        "name": "JavaScript",
+        "rating": 4
+      }, {
+        "name": "React",
+        "rating": 3
+      }, {
+        "name": "Redux",
+        "rating": 2
+      }, {
+        "name": "HTML5",
+        "rating": 3
+      }, {
+        "name": "CSS3",
+        "rating": 3
+      }, {
+        "name": "Sass",
+        "rating": 3
+      }, {
+        "name": "Ruby",
+        "rating": 4
+      }, {
+        "name": "Rails",
+        "rating": 3
+      }, {
+        "name": "jQuery",
+        "rating": 3
+      }, {
+        "name": "d3",
+        "rating": 1
+      }, {
+        "name": "Ember",
+        "rating": 1
+      }
+    ]
+  },
   "projects": [{
     "name": "Resume/Portfolio",
     "description": "A basic resume and portfolio, implemented in React and Redux, including D3 visualizations and multiple API integrations",

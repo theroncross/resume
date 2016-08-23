@@ -1,6 +1,6 @@
-export const toggleSkillBar = (name) => {
+export const sortSkills = (criterion) => {
   return {
-    type: 'TOGGLE_SKILL_BAR',
-    payload: name,
+    type: 'SORT_SKILLS',
+    criterion,
   };
 };

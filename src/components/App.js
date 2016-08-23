@@ -8,7 +8,7 @@ const App = (props) => {
   const appStyle = {
     alignItems: 'flex-start',
     justifyContent: 'space-between',
-    backgroundColor: '#ddd',
+    backgroundColor: 'white',
   };
 
   return (

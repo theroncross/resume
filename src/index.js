@@ -10,10 +10,10 @@ import Experience from './components/experience';
 import Education from './components/education';
 import Projects from './components/projects';
 import Skills from './components/skills';
-import './index.css';
 import resume from './reducers';
+import './index.css';
 
-let store = createStore(resume, data);
+let store = createStore(resume, data, window.devToolsExtension && window.devToolsExtension());
 
 render(
   <Provider store={store}>

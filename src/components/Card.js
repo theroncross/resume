@@ -1,6 +1,7 @@
 import React from 'react';
 import List from './List';
 import Flex from './Flex';
+import { colors } from './styles'
 
 const Card = (props) => {
   const { title, details, accomplishments, children, style } = props;
@@ -9,7 +10,7 @@ const Card = (props) => {
     width: '90%',
     margin: "0 0 10px",
     padding: '0 3%',
-    backgroundColor: "#eee",
+    backgroundColor: colors.tan,
   }
 
   return (
@@ -33,7 +34,7 @@ const { string, object, arrayOf } = React.PropTypes;
 
 Card.propTypes = {
   title: string.isRequired,
-  details: arrayOf(string).isRequired,
+  details: arrayOf(string),
   accomplishments: arrayOf(string),
   children: object,
 };

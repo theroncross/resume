@@ -1,70 +1,38 @@
-import React, { Component } from 'react';
-import * as d3 from 'd3';
-import Bar from './bar';
+import React from 'react';
+import {
+  ResponsiveContainer,
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend } from 'recharts';
+import { colors } from './styles';
 
-class SkillsChart extends Component {
-  constructor(props) {
-    super(props);
-
-    this.renderBars = this.renderBars.bind(this);
-    this.scale = this.scale.bind(this);
-    this.translate = this.translate.bind(this);
-  }
-
-  translate(i) {
-    return `translate(0, ${i * this.props.height})`;
-  }
-
-  scale(val) {
-    return `${d3.scaleLinear()
-    .domain([0, 5])
-    .range([0, this.props.width])(val)}%`;
-  }
-
-  renderBars() {
-    return this.props.skills.map((skill, i) => {
-      return (
-        <Bar
-          key={skill.name}
-          id={skill.name}
-          transform={this.translate(i)}
-          width={this.scale(skill.rating)}
-          height={this.props.height}
-          fill={this.props.fill}
-          x={this.scale(skill.rating - 0.2)}
-          y={this.props.height / 2}
-          text={skill.name}
-        />
-      );
-    });
-  }
-
-  render() {
-    const { skills } = this.props;
-
-    return (
-      <svg
-        className="SkillsChart"
-        width={this.scale(5)}
-        height={this.props.height * skills.length}
+const SkillsChart = (props) => {
+  return (
+    <ResponsiveContainer height={400} >
+      <BarChart
+        data={props.data}
+        margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+        layout="vertical"
       >
-        {this.renderBars()}
-      </svg>
-    );
-  }
-}
-
-SkillsChart.propTypes = {
-  skills: React.PropTypes.array,
-  width: React.PropTypes.string.isRequired,
-  height: React.PropTypes.string.isRequired,
-  fill: React.PropTypes.string.isRequired,
+        <XAxis type="number" domain={[0, 5]} ticks={[1, 2, 3, 4, 5]} />
+        <YAxis dataKey="name" type="category" width={80} />
+        <CartesianGrid strokeDasharray="3 3" />
+        <Tooltip />
+        <Legend />
+        <Bar dataKey="rating" fill={colors.charcoal} label={{ fill: colors.gold }} />
+      </BarChart>
+    </ResponsiveContainer>
+  );
 };
 
-SkillsChart.defaultProps = {
-  width: '90',
-  height: '20',
-  fill: 'steelblue',
+const { arrayOf, object } = React.PropTypes;
+
+SkillsChart.propTypes = {
+  data: arrayOf(object).isRequired,
 };
 
 export default SkillsChart;

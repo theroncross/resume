@@ -1,8 +1,8 @@
 export const colors = {
-  white: '#fff',
-  black: '#111',
-  blue: '#335',
-  grey: '#ddd',
+  white: '#f4f4f4',
+  charcoal: '#373737',
+  tan: '#dcd0c0',
+  gold: '#c0b283',
 };
 
 export const space = [
