@@ -139,7 +139,7 @@
   "projects": [{
     "name": "Resume/Portfolio",
     "description": "A basic resume and portfolio, implemented in React and Redux, including D3 visualizations and multiple API integrations",
-    "url": "http://www.theroncross.com",
+    "url": "https://theroncross.github.io",
     "source": "https://github.com/theroncross/resume"
   }, {
     "name": "Progress",

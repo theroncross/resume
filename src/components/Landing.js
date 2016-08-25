@@ -4,14 +4,14 @@ import List from './List';
 import Bio from './bio';
 import { colors } from './styles';
 
-const SubHeader = () => {
+const Landing = () => {
   const links = [
     <a href="mailto:theroncross@gmail.com"><h3>theroncross@gmail.com</h3></a>,
     <a href="https://github.com/theroncross"><h3>Github</h3></a>,
     <a href="https://www.linkedin.com/in/theroncross"><h3>LinkedIn</h3></a>,
     <a href="https://twitter.com/theroncross"><h3>Twitter</h3></a>,
   ];
-  const headerStyle = {
+  const LandingStyle = {
     flexDirection: 'column',
     alignItems: 'center',
     margin: '40px 0 10px',
@@ -26,11 +26,11 @@ const SubHeader = () => {
   };
 
   return (
-    <Flex style={headerStyle} >
-      <Bio />
+    <Flex style={LandingStyle} >
       <List items={links} style={linkStyle} />
+      <Bio />
     </Flex>
   );
 };
 
-export default SubHeader;
+export default Landing;

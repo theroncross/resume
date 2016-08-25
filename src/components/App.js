@@ -1,5 +1,4 @@
 import React from 'react';
-import SubHeader from './header';
 import FixedHeader from './FixedHeader';
 import '../App.css';
 import Flex from './Flex';
@@ -15,7 +14,6 @@ const App = (props) => {
   return (
     <Flex style={appStyle} >
       <FixedHeader />
-      <SubHeader />
       {props.children}
     </Flex>
   );

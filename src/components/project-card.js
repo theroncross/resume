@@ -6,8 +6,8 @@ const ProjectCard = (props) => {
 
   return (
     <Card
+      title={<a href={url}>{name}</a>}
       details={[
-        <a href={url}>{name}</a>,
         <a href={source}>Github Repo</a>,
       ]}
       accomplishments={[description]}
