@@ -6,6 +6,7 @@ import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 
 import data from 'json!../data.json';
 import App from './components/App';
+import Landing from './components/Landing';
 import Experience from './components/experience';
 import Education from './components/education';
 import Projects from './components/projects';
@@ -19,7 +20,8 @@ render(
   <Provider store={store}>
     <Router history={browserHistory}>
       <Route path="/" component={App}>
-        <IndexRoute component={Experience} />
+        <IndexRoute component={Landing} />
+        <Route path="experience" component={Experience} />
         <Route path="education" component={Education} />
         <Route path="skills" component={Skills} />
         <Route path="projects" component={Projects} />

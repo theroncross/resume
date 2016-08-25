@@ -31,11 +31,11 @@ const Card = (props) => {
   );
 };
 
-const { string, object, arrayOf } = React.PropTypes;
+const { string, node, object, arrayOf } = React.PropTypes;
 
 Card.propTypes = {
-  title: string.isRequired,
-  details: arrayOf(string),
+  title: node.isRequired,
+  details: arrayOf(node),
   accomplishments: arrayOf(string),
   children: object,
 };

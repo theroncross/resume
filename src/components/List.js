@@ -11,7 +11,8 @@ const List = (props) => {
       return <Tag key={i} style={itemStyle} >{item}</Tag>;
     });
   } else {
-    contents = items;
+    contents = items.map((item, i) => ({ ...item, key: i }))
+    console.log(contents);
   }
 
   return (
