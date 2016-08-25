@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from './header';
-import Sidebar from './Sidebar';
+import SubHeader from './header';
+import FixedHeader from './FixedHeader';
 import '../App.css';
 import Flex from './Flex';
 import { colors } from './styles';
@@ -14,8 +14,8 @@ const App = (props) => {
 
   return (
     <Flex style={appStyle} >
-      <Header />
-      <Sidebar />
+      <FixedHeader />
+      <SubHeader />
       {props.children}
     </Flex>
   );
