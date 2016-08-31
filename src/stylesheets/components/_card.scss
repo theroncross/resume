@@ -1,0 +1,12 @@
+.card {
+  width: percentage(9/10);
+  margin: 0 0 10px;
+  padding: percentage(3/100);
+  background-color: white;
+  border-bottom: 1px solid #e8e8e8;
+
+  &:hover {
+    cursor: pointer;
+    background-color: rgba(white, 0.3);
+  }
+}

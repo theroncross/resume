@@ -12,7 +12,6 @@ const List = (props) => {
     });
   } else {
     contents = items.map((item, i) => ({ ...item, key: i }))
-    console.log(contents);
   }
 
   return (

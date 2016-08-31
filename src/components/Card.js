@@ -1,21 +1,16 @@
 import React from 'react';
+import classnames from 'classnames';
 import List from './List';
 import Flex from './Flex';
-import { colors } from './styles'
 
 const Card = (props) => {
-  const { title, details, accomplishments, children, style } = props;
-  const cardStyle = {
-    ...style,
-    width: '90%',
-    margin: "0 0 10px",
-    padding: '3%',
-    backgroundColor: colors.light,
-    borderBottom: `1px solid ${colors.accent}`,
-  }
+  const { title, details, accomplishments, children } = props;
+  let classes = classnames('card', {
+
+  });
 
   return (
-    <Flex style={cardStyle}>
+    <Flex className={classes}>
       <h2>{title}</h2>
       <List
         items={details}
