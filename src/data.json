@@ -146,5 +146,23 @@
     "description": "Dev Bootcamp final project - a goal setting and tracking single page application",
     "url": "https://dudley-mountie-63056.herokuapp.com/",
     "source": "https://github.com/theroncross/progress"
-  }]
+  }],
+  "externalLinks": [
+    {
+      "href":"mailto:theroncross@gmail.com",
+      "site": "theroncross@gmail.com"
+    },
+    {
+      "href":"https://github.com/theroncross",
+      "site": "Github"
+    },
+    {
+      "href":"https://www.linkedin.com/in/theroncross",
+      "site": "LinkedIn"
+    },
+    {
+      "href":"https://twitter.com/theroncross",
+      "site": "Twitter"
+    }
+  ]
 }

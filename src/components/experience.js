@@ -1,22 +1,16 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import ExperienceCard from './experience-card';
-import List from './List';
 
 const Experience = (props) => {
-  const listStyle = {
-    flexDirection: 'column',
-    alignItems: 'center',
-    width: '75%',
-  };
+  const items = props.experience.map((job, i) => {
+    return <ExperienceCard {...job} key={i} />;
+  });
 
   return (
-    <List
-      items={props.experience.map((job, i) => {
-        return <ExperienceCard {...job} key={i} />;
-      })}
-      style={listStyle}
-    />
+    <main className="b-experience-list pure-u-1 pure-u-md-3-5">
+      {items}
+    </main>
   );
 };
 

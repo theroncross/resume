@@ -1,19 +1,5 @@
-.header {
-  position: 'fixed';
-  top: 0;
-  left: 0;
-  width: 100%;
-  min-height: 50px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  background-color: #e8e8e8;
+.b-header {
+  background-color: lightslategrey;
+  color: cornsilk;
+  z-index: 5000;
 };
-
-.nav {
-  width: 40%;
-  display: flex;
-  justify-content: space-between;
-}

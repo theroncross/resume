@@ -5,15 +5,15 @@ import { createStore } from 'redux';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 
 import data from './data.json';
-import App from './components/App';
-import Landing from './components/Landing';
+import App from './components/app';
+import Landing from './components/landing';
 import Experience from './components/experience';
 import Education from './components/education';
 import Projects from './components/projects';
 import Skills from './components/skills';
 import resume from './reducers';
 
-require('./stylesheets/main.scss');
+require('!style!css!sass!./stylesheets/main.scss');
 
 let store = createStore(resume, data, window.devToolsExtension && window.devToolsExtension());
 

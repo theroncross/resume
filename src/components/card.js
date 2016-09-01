@@ -1,16 +1,12 @@
 import React from 'react';
-import classnames from 'classnames';
-import List from './List';
-import Flex from './Flex';
+import List from './list';
+import Flex from './flex';
 
 const Card = (props) => {
   const { title, details, accomplishments, children } = props;
-  let classes = classnames('card', {
-
-  });
 
   return (
-    <Flex className={classes}>
+    <Flex>
       <h2>{title}</h2>
       <List
         items={details}
@@ -19,7 +15,7 @@ const Card = (props) => {
       <List
         items={accomplishments}
         tag="p"
-        style={{ justifyContent:"flex-start" }}
+        style={{ justifyContent: 'flex-start' }}
       />
       {children}
     </Flex>

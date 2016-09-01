@@ -1,22 +1,17 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import ProjectCard from './project-card';
-import List from './List';
 
 const Projects = (props) => {
-  const listStyle = {
-    flexDirection: 'column',
-    alignItems: 'center',
-    width: '75%',
-  };
+  const items = props.projects.map((project, i) => {
+    return <ProjectCard {...project} key={i} />;
+  });
+
 
   return (
-    <List
-      style={listStyle}
-      items={props.projects.map((project, i) => {
-        return <ProjectCard {...project} key={i} />;
-      })}
-    />
+    <main className=".b-project-list pure-u-1 pure-u-md-2-3">
+      {items}
+    </main>
   );
 };
 
