@@ -1,3 +1,5 @@
+@import 'list';
+
 .b-landing {
-  text-align: center;
+  @extend .b-card-list;
 }

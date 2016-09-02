@@ -1,3 +1,5 @@
-.b-skills {
+@import 'list';
 
+.b-skills {
+  @extend .b-card-list;
 }
