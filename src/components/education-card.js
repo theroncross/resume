@@ -1,15 +1,19 @@
 import React from 'react';
-import Card from './Card';
 
 const EducationCard = (props) => {
-  const { degree, school, location, gradDate, description } = props;
+  const details = [props.school, props.location, props.gradDate]
+    .map((detail, i) => {
+      return <li className="b-card__detail" key={i}><h4>{detail}</h4></li>;
+    });
 
   return (
-    <Card
-      title={degree}
-      details={[school, location, gradDate]}
-      accomplishments={[description]}
-    />
+    <section className="b-education-card">
+      <h2 className="b-education-card__title">{props.degree}</h2>
+      <ul className="b-education-card__detail-list">
+        {details}
+      </ul>
+      <p className="b-education-card__description">{props.description}</p>
+    </section>
   );
 };
 

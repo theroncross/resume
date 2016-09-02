@@ -4,15 +4,16 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 
-import data from 'json!../data.json';
-import App from './components/App';
-import Landing from './components/Landing';
+import data from './data.json';
+import App from './components/app';
+import Landing from './components/landing';
 import Experience from './components/experience';
 import Education from './components/education';
 import Projects from './components/projects';
 import Skills from './components/skills';
 import resume from './reducers';
-import './index.css';
+
+require('!style!css!sass!./stylesheets/main.scss');
 
 let store = createStore(resume, data, window.devToolsExtension && window.devToolsExtension());
 

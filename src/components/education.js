@@ -1,22 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import EducationCard from './education-card';
-import List from './List';
 
 const Education = (props) => {
-  const listStyle = {
-    flexDirection: 'column',
-    alignItems: 'center',
-    width: '75%',
-  };
-
   return (
-    <List
-      items={props.education.map((school, i) => {
+    <main className="b-education-list pure-u-1 pure-u-md-3-5">
+      {props.education.map((school, i) => {
         return <EducationCard {...school} key={i} />;
       })}
-      style={listStyle}
-    />
+    </main>
   );
 };
 

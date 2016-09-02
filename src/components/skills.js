@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { sortSkills } from '../actions';
 import SkillsChart from './skills-chart';
-import Flex from './Flex';
+import Flex from './flex';
 
 const Skills = (props) => {
   const { skills, handleSelectChange } = props;

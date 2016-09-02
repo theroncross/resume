@@ -1,5 +1,5 @@
 import React from 'react';
-import Flex from './Flex';
+import Flex from './flex';
 
 const List = (props) => {
   const { items, tag, itemStyle, style } = props;
@@ -12,7 +12,6 @@ const List = (props) => {
     });
   } else {
     contents = items.map((item, i) => ({ ...item, key: i }))
-    console.log(contents);
   }
 
   return (

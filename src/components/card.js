@@ -1,21 +1,12 @@
 import React from 'react';
-import List from './List';
-import Flex from './Flex';
-import { colors } from './styles'
+import List from './list';
+import Flex from './flex';
 
 const Card = (props) => {
-  const { title, details, accomplishments, children, style } = props;
-  const cardStyle = {
-    ...style,
-    width: '90%',
-    margin: "0 0 10px",
-    padding: '3%',
-    backgroundColor: colors.light,
-    borderBottom: `1px solid ${colors.accent}`,
-  }
+  const { title, details, accomplishments, children } = props;
 
   return (
-    <Flex style={cardStyle}>
+    <Flex>
       <h2>{title}</h2>
       <List
         items={details}
@@ -24,7 +15,7 @@ const Card = (props) => {
       <List
         items={accomplishments}
         tag="p"
-        style={{ justifyContent:"flex-start" }}
+        style={{ justifyContent: 'flex-start' }}
       />
       {children}
     </Flex>

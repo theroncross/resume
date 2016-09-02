@@ -1,0 +1,19 @@
+.b-card {
+  padding: .5rem;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.b-card__title {
+  margin: 10px 0;
+}
+
+.b-card__detail-list {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0;
+}
+
+.b-card__detail-list h4 {
+  margin: 10px 0;
+}

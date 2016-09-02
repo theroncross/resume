@@ -8,7 +8,6 @@ import {
   CartesianGrid,
   Tooltip,
   Legend } from 'recharts';
-import { colors } from './styles';
 
 const SkillsChart = (props) => {
   return (
@@ -23,7 +22,7 @@ const SkillsChart = (props) => {
         <CartesianGrid strokeDasharray="3 3" />
         <Tooltip />
         <Legend />
-        <Bar dataKey="rating" fill={colors.accent} label={{ fill: colors.dark }} />
+        <Bar dataKey="rating" fill={'#eee'} label={{ fill: '#eee' }} />
       </BarChart>
     </ResponsiveContainer>
   );
