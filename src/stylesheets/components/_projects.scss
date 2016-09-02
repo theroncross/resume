@@ -1,3 +1,5 @@
-.b-projects {
+@import 'list';
 
+.b-project-list {
+  @extend .b-card-list;
 }

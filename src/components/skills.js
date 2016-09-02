@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { sortSkills } from '../actions';
 import SkillsChart from './skills-chart';
-import Flex from './flex';
 
 const Skills = (props) => {
   const { skills, handleSelectChange } = props;
@@ -22,10 +21,7 @@ const Skills = (props) => {
   };
 
   return (
-    <Flex
-      width="75%"
-      justifyContent="space-around"
-    >
+    <main className="b-skills pure-u-1 pure-u-md-3-5">
       <div>
         <h4>Sort skills by:</h4>
         <select
@@ -37,7 +33,7 @@ const Skills = (props) => {
         </select>
       </div>
       <SkillsChart data={sortData()} />
-    </Flex>
+    </main>
   );
 };
 

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import Bio from './bio';
 
 const Landing = (props) => {
-  const links = props.externalLinks.map((link) => {
+  const links = props.contact.map((link) => {
     return (
       <li className="pure-menu-item" key={link.site}>
         <a
@@ -15,7 +15,7 @@ const Landing = (props) => {
   });
 
   return (
-    <main className=".b-landing pure-u-1" >
+    <main className="b-landing pure-u-1 pure-u-md-3-5" >
       <ul className="pure-menu pure-menu-horizontal">{links}</ul>
       <Bio />
     </main>
@@ -23,11 +23,11 @@ const Landing = (props) => {
 };
 
 Landing.propTypes = {
-  externalLinks: React.PropTypes.array.isRequired,
+  contact: React.PropTypes.array.isRequired,
 };
 
 const mapStateToProps = (state) => {
-  return { externalLinks: state.externalLinks };
+  return { contact: state.contact };
 };
 
 export default connect(mapStateToProps)(Landing);

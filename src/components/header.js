@@ -4,7 +4,7 @@ import Nav from './nav';
 
 const Header = () => {
   return (
-    <header className="b-header pure-menu pure-menu-horizontal pure-u-1" >
+    <header className="b-header pure-u-1" >
       <Brand />
       <Nav />
     </header>
