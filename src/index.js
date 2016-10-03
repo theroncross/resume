@@ -13,9 +13,11 @@ import Projects from './components/projects';
 import Skills from './components/skills';
 import resume from './reducers';
 
-require('!style!css!sass!./stylesheets/main.scss');
+require('../node_modules/purecss/build/base-min.css');
+require('../node_modules/purecss/build/grids-responsive-min.css');
+require('./stylesheets/main.scss');
 
-let store = createStore(resume, data, window.devToolsExtension && window.devToolsExtension());
+const store = createStore(resume, data, window.devToolsExtension && window.devToolsExtension());
 
 render(
   <Provider store={store}>
