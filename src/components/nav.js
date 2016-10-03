@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-import classNames from 'classnames';
 
 class Nav extends Component {
   constructor(props) {
@@ -31,12 +30,10 @@ class Nav extends Component {
   }
 
   render() {
-    const toggleClass = classNames('custom-toggle', {
-      'x': this.state.menuOpen,
-    });
-    const navClass = classNames('b-nav', 'pure-menu-list', 'custom-can-transform', {
-      'open': this.state.menuOpen,
-    });
+    let toggleClass = 'custom-toggle';
+    toggleClass += this.state.menuOpen ? ' x' : '';
+    let navClass = 'b-nav pure-menu-list custom-can-transform';
+    navClass += this.state.menuOpen ? ' open' : '';
 
     return (
       <nav className="pure-menu">

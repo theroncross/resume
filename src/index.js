@@ -15,7 +15,7 @@ import resume from './reducers';
 
 require('!style!css!sass!./stylesheets/main.scss');
 
-let store = createStore(resume, data, window.devToolsExtension && window.devToolsExtension());
+const store = createStore(resume, data, window.devToolsExtension && window.devToolsExtension());
 
 render(
   <Provider store={store}>

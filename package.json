@@ -51,9 +51,6 @@
     "whatwg-fetch": "1.0.0"
   },
   "dependencies": {
-    "axios": "^0.13.1",
-    "classnames": "^2.2.5",
-    "d3": "^4.2.1",
     "extract-text-webpack-plugin": "^1.0.1",
     "google-maps": "^3.2.1",
     "google-maps-react": "^1.0.18",
@@ -68,9 +65,10 @@
   },
   "scripts": {
     "start": "node ./scripts/start.js",
-    "build": "node ./scripts/build.js",
+    "build": "node ./scripts/build.js"
   },
   "eslintConfig": {
     "extends": "./config/eslint.js"
-  }
+  },
+  "homepage": "https://theroncross.github.io/resume"
 }
