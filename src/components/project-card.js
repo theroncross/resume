@@ -1,17 +1,14 @@
 import React from 'react';
-import Card from './card';
 
 const ProjectCard = (props) => {
   const { name, description, url, source } = props;
 
   return (
-    <Card
-      title={<a href={url}>{name}</a>}
-      details={[
-        <a href={source}>Github Repo</a>,
-      ]}
-      accomplishments={[description]}
-    />
+    <div>
+      <h3 className="project__title">{name}</h3>
+      <a className="project__source-link" href={source}>Github Repo</a>
+      <p className="project__description">{[description]}</p>
+    </div>
   );
 };
 

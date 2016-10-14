@@ -8,9 +8,9 @@ const Experience = (props) => {
   });
 
   return (
-    <main className="b-experience-list pure-u-1 pure-u-md-3-5">
+    <section className="b-experience pure-u-1 pure-u-md-3-5">
       {items}
-    </main>
+    </section>
   );
 };
 

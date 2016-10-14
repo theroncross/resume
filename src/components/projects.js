@@ -9,7 +9,7 @@ const Projects = (props) => {
 
 
   return (
-    <main className="b-project-list pure-u-1 pure-u-md-3-5">
+    <main className="b-projects pure-u-1 pure-u-md-3-5">
       {items}
     </main>
   );

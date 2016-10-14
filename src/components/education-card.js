@@ -7,13 +7,13 @@ const EducationCard = (props) => {
     });
 
   return (
-    <section className="b-education-card">
+    <div className="b-education-card">
       <h2 className="b-education-card__title">{props.degree}</h2>
       <ul className="b-education-card__detail-list">
         {details}
       </ul>
       <p className="b-education-card__description">{props.description}</p>
-    </section>
+    </div>
   );
 };
 

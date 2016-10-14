@@ -1,17 +1,22 @@
 import React from 'react';
 import Header from './header';
+import Landing from './landing';
+import Experience from './experience';
+import Education from './education';
+import Projects from './projects';
+import Skills from './skills';
 
-const App = (props) => {
+const App = () => {
   return (
     <div className="b-app pure-g">
       <Header />
-      {props.children}
+      <Landing />
+      <Experience />
+      <Education />
+      <Projects />
+      <Skills />
     </div>
   );
-};
-
-App.propTypes = {
-  children: React.PropTypes.element.isRequired,
 };
 
 export default App;
