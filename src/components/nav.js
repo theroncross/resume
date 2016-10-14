@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-scroll';
 
 class Nav extends Component {
   constructor(props) {
@@ -16,9 +17,14 @@ class Nav extends Component {
     return pages.map((page) => {
       return (
         <li className="b-nav__item pure-menu-item" key={page}>
-          <a href={`.b-${page}`} className="pure-menu-link" onClick={this.toggleMenu}>
+          <Link
+            to={page}
+            className="pure-menu-link"
+            onClick={this.toggleMenu}
+            spy={true} smooth={true} duration={500}
+          >
             {page}
-          </a>
+          </Link>
         </li>
       );
     });
