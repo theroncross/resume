@@ -16,7 +16,7 @@ const ExperienceCard = (props) => {
   });
 
   return (
-    <section className="b-experience-card">
+    <div className="b-experience-card pure-u-1 pure-u-md-1-2">
       <h2 className="b-experience-card__title">{title}</h2>
       <ul className="b-experience-card__detail-list">
         {details}
@@ -32,7 +32,7 @@ const ExperienceCard = (props) => {
           lng={lng}
         />
       </div>
-    </section>
+    </div>
   );
 };
 

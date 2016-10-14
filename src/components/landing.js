@@ -6,10 +6,9 @@ const Landing = (props) => {
   const links = props.contact.map((link) => {
     return (
       <li className="pure-menu-item" key={link.site}>
-        <a
-          className=".b-landing__link pure-menu-link"
-          href={link.href}
-        >{link.site}</a>
+        <a className="b-landing__link" href={link.href}>
+          {link.site}
+        </a>
       </li>
     );
   });

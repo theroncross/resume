@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
+import { Link } from 'react-scroll';
 
 class Nav extends Component {
   constructor(props) {
@@ -16,11 +16,12 @@ class Nav extends Component {
     const pages = ['experience', 'education', 'skills', 'projects'];
     return pages.map((page) => {
       return (
-        <li className="b-nav-item pure-menu-item" key={page}>
+        <li className="b-nav__item pure-menu-item" key={page}>
           <Link
-            to={`/${page}`}
-            className="b-nav__link pure-menu-link"
+            to={page}
+            className="pure-menu-link"
             onClick={this.toggleMenu}
+            spy={true} smooth={true} duration={500}
           >
             {page}
           </Link>
@@ -36,8 +37,8 @@ class Nav extends Component {
     navClass += this.state.menuOpen ? ' open' : '';
 
     return (
-      <nav className="pure-menu">
-        <a href="#" className={toggleClass} onClick={this.toggleMenu}>
+      <nav className="pure-menu pure-menu horizontal">
+        <a className={toggleClass} onClick={this.toggleMenu}>
           <s className="bar" />
           <s className="bar" />
         </a>
@@ -46,6 +47,10 @@ class Nav extends Component {
     );
   }
 }
+
+Nav.propTypes = {
+  menuOpen: React.PropTypes.bool,
+};
 
 Nav.defaultProps = {
   menuOpen: true,

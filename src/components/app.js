@@ -1,17 +1,23 @@
 import React from 'react';
+import { Element } from 'react-scroll';
 import Header from './header';
+import Landing from './landing';
+import Experience from './experience';
+import Education from './education';
+import Projects from './projects';
+import Skills from './skills';
 
-const App = (props) => {
+const App = () => {
   return (
     <div className="b-app pure-g">
-      <Header />
-      {props.children}
+      <Element name="header"><Header /></Element>
+      <Element name="landing"><Landing /></Element>
+      <Element name="experience"><Experience /></Element>
+      <Element name="education"><Education /></Element>
+      <Element name="projects"><Projects /></Element>
+      <Element name="skills"><Skills /></Element>
     </div>
   );
-};
-
-App.propTypes = {
-  children: React.PropTypes.element.isRequired,
 };
 
 export default App;

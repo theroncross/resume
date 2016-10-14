@@ -1,5 +1,4 @@
-@import 'list';
-
-.b-education-list {
-  @extend .b-card-list;
+.b-education {
+  padding: 40px 0;
+  border-bottom: 1px solid black;
 }

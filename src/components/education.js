@@ -4,11 +4,11 @@ import EducationCard from './education-card';
 
 const Education = (props) => {
   return (
-    <main className="b-education-list pure-u-1 pure-u-md-3-5">
+    <section className="b-education pure-u-1 pure-u-md-3-5">
       {props.education.map((school, i) => {
         return <EducationCard {...school} key={i} />;
       })}
-    </main>
+    </section>
   );
 };
 

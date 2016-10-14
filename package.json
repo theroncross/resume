@@ -55,11 +55,13 @@
     "google-maps": "^3.2.1",
     "google-maps-react": "^1.0.18",
     "json-loader": "^0.5.4",
+    "purecss": "^0.6.0",
     "react": "^15.3.1",
     "react-dom": "^15.2.1",
     "react-google-maps": "^4.11.0",
     "react-redux": "^4.4.5",
     "react-router": "^2.6.1",
+    "react-scroll": "^1.4.1",
     "recharts": "^0.13.3",
     "redux": "^3.5.2"
   },
